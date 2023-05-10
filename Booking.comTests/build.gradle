@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+}
+
+group 'hu.progmatic.testframework'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.testng:testng:7.7.1'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.7.2'
+}
+
+test {
+    useTestNG()
+}
+
+task smokeTests(type: Test) { // we define a task with name 'smokeTests'
+    def groups = System.getProperty('groups', 'smoke')
+    useTestNG() {
+        includeGroups groups
+    }
+}
+
+task regressionTests(type: Test) { // we define a task with name 'regressionTests'
+    def groups = System.getProperty('groups', 'regression')
+    useTestNG() {
+        includeGroups groups
+    }
+}
+
+task demoTests(type: Test) { // we define a task with name 'demoTests'
+    def groups = System.getProperty('groups', 'demo')
+    useTestNG() {
+        includeGroups groups
+    }
+}
