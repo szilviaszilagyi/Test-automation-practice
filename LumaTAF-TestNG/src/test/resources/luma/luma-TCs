@@ -1,0 +1,33 @@
+demo user:
+Email:roni_cost@example.com
+Password:roni_cost3@example.com
+
+HomePage
+- successful login test // captcha is incorrect
+- image navigation test: click on an image on the home page and check if it navigates to the correct url
+(this could be done for all the images on the home page)
+- test menu item navigation
+(this could be done for all the menu items)
+- check that logo navigates to home page
+- check grid and list view items
+- search input with single item to match
+- search input with multiple items to match
+- sort by dropdown
+    - position
+    - alphabetical
+    - price
+- filter tests
+- check add to favorites button
+- add to comparison list: add two items, check that both appears on the comparison list page
+- add to comparison list: add an item, remove it, check that it is successfully removed
+- add to cart from store page
+    - check that it navigates to product page if there are missing options
+    - if every option is set, it is added to the cart
+    - adding multiple items to the cart sets the number of items next to the cart icon correctly
+- product page
+    - size not selected
+    - color not selected
+    - quantity not defined
+    - quantity is 0
+    - quantity is less than 0
+    - successfully added to cart
